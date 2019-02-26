@@ -1,0 +1,286 @@
+@import "part"
+@import "normalize"
+@import "libs"
+@import "vars"
+@import "fonts"
+
+html
+    scroll-behavior: smooth
+
+body
+    font-family: Roboto
+    overflow-x: hidden
+    font-weight: 300
+
+body, html
+    width: 100%
+
+a
+    color: #1B1414
+    transition: all .2s ease
+
+a:hover
+    text-decoration: none
+
+// index.html - Begin
+header
+    max-width: 1400px
+    margin: 0 auto
+    text-align: center
+    position: relative
+    height: 200px
+    .banner
+        content: ""
+        position: absolute
+        top: 0
+        right: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+    a
+        content: ""
+        position: absolute
+        top: 5%
+        left: 7%
+        z-index: 100
+        .logo
+            width: 110px
+            height: auto
+            object-fit: cover
+    .sticker
+        content: ""
+        position: absolute
+        object-fit: cover
+        width: 80px
+        height: auto
+        right: 4%
+        top: 5%
+    .info
+        content: ""
+        position: absolute
+        width: 100%
+        top: 50%
+        transform: translateY(-50%)
+        padding: 0.5rem 0
+        height: 60px
+        left: 0
+        right: 0
+        &-phone
+            position: relative
+            padding: 1rem 0 0 0
+            a
+                font-size: 1.2rem
+                position: relative
+                display: inline-block
+                text-align: center
+                margin: 0 4px
+                left: 0
+                right: 0
+                color: #FFF700
+                font-weight: 400
+                transition: all .3s ease
+                text-decoration: none
+                &:hover
+                    color: #999400
+.info2
+    position: relative
+    bottom: 70px
+    max-width: 1400px
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: -70px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    li
+        position: relative
+        list-style-type: none
+        background-color: #FFF700
+        margin: 2px 2px
+        text-align: center
+        display: inline-block
+        a
+            color: #000
+            text-transform: uppercase
+            font-size: 12px
+            position: relative
+            display: block
+            text-decoration: none
+            font-weight: 600
+            padding: 4px 6px
+            transition: all .3s ease
+            &:hover
+                background-color: rgba(0,0,0,.2)
+#carousel1
+    max-width: 1400px
+    margin-left: auto
+    margin-right: auto
+    margin-top: 0.5rem
+    .owl-stage-outer
+        .owl-stage
+            .owl-item
+                width: 100%
+            .item
+                height: 300px
+            .item1
+                background: url(https://images.unsplash.com/photo-1501066927591-314112b5888e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80) no-repeat center center
+                background-size: cover
+            .item2
+                background: url(https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260) no-repeat center center
+                background-size: cover
+            .item3
+                background: url(https://images.unsplash.com/photo-1508698947694-5ae81f424907?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80) no-repeat center center
+                background-size: cover
+.descr
+    max-width: 1400px
+    margin: 0 auto
+    font-size: 12px
+    padding: 0 6px
+footer
+    margin-top: 0.5rem
+    margin-left: auto
+    margin-right: auto
+    position: relative
+    background-color: #003197
+    min-height: 50px
+    padding: 8px 2px
+    .social
+        text-align: center
+        a
+            margin: 0 0.5rem
+            &:hover .fa
+                color: rgba(0,0,0,.8)
+            .fa
+                font-size: 1rem
+                transition: all .3s ease
+                color: #fff
+    p
+        margin: 0
+        text-align: center
+        color: #fff
+        span
+            color: #fff
+            font-size: 0.8rem
+            font-weight: 400
+        a
+            color: #fff
+            font-weight: 400
+            transition: all .3s ease
+            &:hover
+                color: rgba(0,0,0,.8)
+.container
+    max-width: 1400px
+    margin: 0 auto
+    .article
+        padding: 2px
+        box-sizing: border-box
+        text-align: center
+        border: 1px solid #000
+        margin: 0.5rem 0.5rem
+        h2
+            text-align: center
+            font-size: 1.2rem
+        p
+            text-align: center
+            font-size: 12px
+            max-width: 800px
+            margin: 0 auto
+            padding: 0.5rem 0
+        img
+            margin-top: 0.5rem
+            width: 100%
+            height: 100%
+            max-width: 400px
+            max-height: auto
+            display: inline-block
+            object-fit: cover
+// index.html - End
+
+
+
+// page price.html - Begin
+.tc0
+    display: none
+.tc11
+.title
+    font-size: 0.9rem
+    text-align: center
+    margin: 0
+    padding: 10px 2px
+    font-weight: 600
+.tc6
+    padding-bottom: 1rem
+.table_container
+    max-width: 1400px
+    margin: 0 auto
+    overflow-x: auto
+    text-align: center
+    table
+        margin: 0 auto
+.table
+    margin: 0 auto
+    &-header
+        background-color: #ed1c24
+        th
+            font-size: 0.8rem
+            font-weight: 300
+            white-space: normal
+            padding: 2px 4px
+            border: 1px solid #000
+            color: #fff
+            text-align: center
+    &-content
+        td
+            vertical-align: middle
+            border: 1px solid #000
+            text-align: center
+            padding: 0 4px
+            font-size: 0.8rem   
+            transition: all .3s ease
+    &-content:nth-child(odd)
+        background-color: #FFF700
+    &-content:nth-child(even)
+        td:first-child
+            background-color: #FFF700
+.table
+    .table-content
+        &:hover, &:focus, &:active
+            td
+                cursor: pointer
+                background-color: rgba(0,0,0,.4)
+.tc6
+    .table
+        &-header
+            th:first-child
+                background-color: #fff
+        &-content
+            td:first-child
+                background-color: $red
+                color: #fff
+        th:nth-child(2), th:nth-child(3)
+            background-color: #FFF700 
+            color: #000
+            font-weight: 400
+.tc11, .tc12, .tc13
+    .table-header
+        th:not(:first-child)
+            background-color: $yellow
+            color: #000
+    .table-content
+        td:first-child
+            background-color: $red
+            color: #fff
+.table_container
+    height: auto
+    .table2, .table3, .table4, .table5, .table6
+        width: 250px
+.tc11
+    margin-top: 3rem
+.table13
+    width: 320px
+// page price.html - End
+
+
+
+@import "media"
