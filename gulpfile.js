@@ -11,23 +11,54 @@ const
     pngquant = require('imagemin-pngquant'),
     cache = require('gulp-cache'),
     autoprefixer = require('gulp-autoprefixer'),
-    groupmq  = require('gulp-group-css-media-queries'); // not required
+    groupmq = require('gulp-group-css-media-queries'); // not required
 
-/* Sass */
+const browserslist = [
+        "last 10 version",
+        ">1%",
+        "ie 8",
+        "ie 7",
+        "Safari 4",
+        "Safari 5",
+        "ios_saf 4",
+        "ios_saf 5",
+        "Edge 13",
+      ]
+
+/* Sass  OLD*/
+// gulp.task('sass', function () {
+//     return (gulp.src('app/sass/**/*.+(sass|scss)'))
+//         .pipe(sass())
+//         .pipe(groupmq()) // Group media queries!
+//         .pipe(autoprefixer(['last 15 version', '>1%', 'ie 8', 'ie 7'], {cascade: true}))
+//         .pipe(gulp.dest('app/css'))
+//         .pipe(browserSync.reload({ stream: true })) /* добавляем после установки browserSync, чтобы обновлялись стили*/
+// });
+
+/* Sass, cжимаем и переименовываем CSS файлы  NEW*/
 gulp.task('sass', function () {
     return (gulp.src('app/sass/**/*.+(sass|scss)'))
         .pipe(sass())
         .pipe(groupmq()) // Group media queries!
-        .pipe(autoprefixer(['last 15 version', '>1%', 'ie 8', 'ie 7'], {cascade: true}))
+        // .pipe(autoprefixer(['last 15 version', '>1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(autoprefixer(browserslist, { cascade: true }))
+        .pipe(cssnano())
+        .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.reload({ stream: true })) /* добавляем после установки browserSync, чтобы обновлялись стили*/
+});
+
+
+/* Таск очитки папки app/css */
+gulp.task('cleanapp', function () {
+    return del.sync('app/css');
 });
 
 /* 40:00 browserSync */
 gulp.task('browserSync', function () {
     browserSync({
         // proxy: "test.ru",
-        server: { baseDir: 'app'},
+        server: { baseDir: 'app' },
         notify: false // отключаем уведомления
     })
 });
@@ -35,10 +66,7 @@ gulp.task('browserSync', function () {
 gulp.task('scripts', function () {
     return gulp.src([
         'app/libs/jquery-3.3.1/jquery.min.js',
-        'app/libs/mypopper.js',
-        'app/libs/bootstrap-4.1.3/js/bootstrap.min.js',
         'app/libs/owl-carousel/owl.carousel.min.js',
-        'app/libs/nprogress/nprogress.js',
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
@@ -67,8 +95,7 @@ gulp.task('img', function () {
 /* Таск для продакшена */
 gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function () {
     var buildCss = gulp.src([
-        'app/css/main.css',
-        'app/css/main.min.css'
+        'app/css/*.css'
     ])
         .pipe(gulp.dest('dist/css'));
 
@@ -80,6 +107,9 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function () {
 
     var buildHtml = gulp.src('app/*.html')
         .pipe(gulp.dest('dist'));
+
+    return gulp.src(['app/libs/**/*'])
+        .pipe(gulp.dest('dist/libs'));
 });
 
 /* Таск очитки папки dist */
@@ -88,17 +118,17 @@ gulp.task('clean', function () {
 });
 
 /* Таск очистки кеша */
-gulp.task('clear', function(){
+gulp.task('clear', function () {
     return cache.clearAll();
 });
 
 /* 35:00 Watch */
 gulp.task('watch', ['browserSync', 'sass', 'scripts'], function () {     /* 2 параметр: указываем что методы, которые выполняются до запуска команды watch */
-gulp.watch(['app/sass/**/*.+(sass|scss)'], ['sass']);             /* 1 параметр: указываем файлы за которымы нужно следить
+    gulp.watch(['app/sass/**/*.+(sass|scss)'], ['sass']);             /* 1 параметр: указываем файлы за которымы нужно следить
                                                             2 параметр: указываем команду для выполнения */
-gulp.watch(['app/**/*.html'], browserSync.reload);            /* следим за html файлами */
-gulp.watch(['app/**/*.php'], browserSync.reload);           /* следим за php файлами */               
-gulp.watch(['app/js/**/*.js'], browserSync.reload);          /* следим за js файлами */
+    gulp.watch(['app/**/*.html'], browserSync.reload);            /* следим за html файлами */
+    gulp.watch(['app/**/*.php'], browserSync.reload);           /* следим за php файлами */
+    gulp.watch(['app/js/**/*.js'], browserSync.reload);          /* следим за js файлами */
 });
 
-gulp.task('default', ['watch'], function(){});
+gulp.task('default', ['cleanapp','watch'], function () { });

@@ -8,12 +8,12 @@ html
     scroll-behavior: smooth
 
 body
-    font-family: Roboto
     overflow-x: hidden
     font-weight: 300
 
 body, html
     width: 100%
+    font-family: Roboto, Arial
 
 a
     color: #1B1414
@@ -26,119 +26,110 @@ a:hover
 header
     max-width: 1400px
     margin: 0 auto
-    text-align: center
+    background: url(../img/header5.jpg) no-repeat center center
+    background-size: cover
+    height: 100px
+    max-height: 100px
     position: relative
-    height: 200px
-    .banner
+    .logolink
         content: ""
         position: absolute
-        top: 0
-        right: 0
-        left: 0
-        width: 100%
-        height: 100%
-        object-fit: cover
-    a
-        content: ""
-        position: absolute
-        top: 5%
-        left: 7%
-        z-index: 100
-        .logo
-            width: 110px
+        top: 12px
+        left: 1.2rem
+        z-index: 300
+        img
+            width: 100px
             height: auto
-            object-fit: cover
-    .sticker
+    .stickerlink
         content: ""
         position: absolute
-        object-fit: cover
-        width: 80px
-        height: auto
-        right: 4%
-        top: 5%
-    .info
-        content: ""
-        position: absolute
-        width: 100%
-        top: 50%
-        transform: translateY(-50%)
-        padding: 0.5rem 0
-        height: 60px
-        left: 0
-        right: 0
-        &-phone
-            position: relative
-            padding: 1rem 0 0 0
-            a
-                font-size: 1.2rem
-                position: relative
-                display: inline-block
-                text-align: center
-                margin: 0 4px
-                left: 0
-                right: 0
-                color: #FFF700
-                font-weight: 400
-                transition: all .3s ease
-                text-decoration: none
-                &:hover
-                    color: #999400
+        top: 12px
+        right: 1rem
+        img
+            width: 60px
+            height: auto
+.phones
+    position: relative
+    max-width: 900px
+    margin: 0 auto
+    text-align: center
+    top: -20px
+    margin-bottom: -20px
+    z-index: 2000
+    a
+        color: $yellow
+        text-decoration: none
+        font-weight: 600
+        font-size: 14px
+        &:hover
+            color: rgba(237, 28, 36, .9)
+    a:first-child
+        padding-right: 4px
+    a:last-child
+        padding-left: 4px
 .info2
     position: relative
-    bottom: 70px
-    max-width: 1400px
-    margin-left: auto
-    margin-right: auto
-    margin-bottom: -70px
+    max-width: 800px
+    margin: 0 auto
+    z-index: 300
+    text-align: center
     display: flex
     flex-direction: column
     justify-content: center
+    margin-top: 3px
     li
-        position: relative
-        list-style-type: none
+        margin: 1px 0
         background-color: #FFF700
-        margin: 2px 2px
-        text-align: center
-        display: inline-block
-        a
+        list-style-type: none
+        a   
+            padding: 6px 0
+            display: block
+            height: 100%
             color: #000
             text-transform: uppercase
             font-size: 12px
-            position: relative
-            display: block
             text-decoration: none
             font-weight: 600
-            padding: 4px 6px
             transition: all .3s ease
-            &:hover
-                background-color: rgba(0,0,0,.2)
+            &:hover, &:active, &:focus
+                background-color: rgba(237, 28, 36,.8)
+                color: #fff
+            span
+                text-transform: lowercase
+        .active
+            background-color: rgba(237, 28, 36,.8)
+            color: #fff
 #carousel1
     max-width: 1400px
     margin-left: auto
     margin-right: auto
-    margin-top: 0.5rem
+    display: block
     .owl-stage-outer
         .owl-stage
             .owl-item
                 width: 100%
+                max-width: 100%
             .item
-                height: 300px
+                height: 200px
             .item1
-                background: url(https://images.unsplash.com/photo-1501066927591-314112b5888e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80) no-repeat center center
+                background: url(../img/car1.jpg) no-repeat center center
                 background-size: cover
             .item2
-                background: url(https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260) no-repeat center center
+                background: url(../img/car2.jpeg) no-repeat center center
                 background-size: cover
             .item3
-                background: url(https://images.unsplash.com/photo-1508698947694-5ae81f424907?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80) no-repeat center center
+                background: url(../img/car3.jpg) no-repeat center center
                 background-size: cover
+    .owl-dots
+        margin: 6px 0 0 0
 .descr
+    display: block
     max-width: 1400px
     margin: 0 auto
     font-size: 12px
-    padding: 0 6px
+    padding: 4px 6px
+    text-align: center
 footer
-    margin-top: 0.5rem
     margin-left: auto
     margin-right: auto
     position: relative
@@ -147,6 +138,8 @@ footer
     padding: 8px 2px
     .social
         text-align: center
+        padding-top: 5px
+        padding-bottom: 10px
         a
             margin: 0 0.5rem
             &:hover .fa
@@ -187,6 +180,9 @@ footer
             max-width: 800px
             margin: 0 auto
             padding: 0.5rem 0
+            &:first-letter
+                font-size: 22px
+                font-weight: 600
         img
             margin-top: 0.5rem
             width: 100%
@@ -194,7 +190,7 @@ footer
             max-width: 400px
             max-height: auto
             display: inline-block
-            object-fit: cover
+            object-fit: contain
 // index.html - End
 
 
@@ -202,84 +198,186 @@ footer
 // page price.html - Begin
 .tc0
     display: none
-.tc11
-.title
-    font-size: 0.9rem
-    text-align: center
-    margin: 0
-    padding: 10px 2px
-    font-weight: 600
-.tc6
-    padding-bottom: 1rem
 .table_container
-    max-width: 1400px
-    margin: 0 auto
+    max-width: 992px
+    margin: 0 auto 0 auto
     overflow-x: auto
-    text-align: center
     table
+        border: 2px solid #c1c1c1
         margin: 0 auto
-.table
-    margin: 0 auto
-    &-header
-        background-color: #ed1c24
-        th
-            font-size: 0.8rem
-            font-weight: 300
-            white-space: normal
-            padding: 2px 4px
-            border: 1px solid #000
-            color: #fff
-            text-align: center
-    &-content
-        td
-            vertical-align: middle
-            border: 1px solid #000
-            text-align: center
-            padding: 0 4px
-            font-size: 0.8rem   
-            transition: all .3s ease
-    &-content:nth-child(odd)
-        background-color: #FFF700
-    &-content:nth-child(even)
-        td:first-child
-            background-color: #FFF700
-.table
-    .table-content
-        &:hover, &:focus, &:active
-            td
-                cursor: pointer
-                background-color: rgba(0,0,0,.4)
-.tc6
-    .table
-        &-header
-            th:first-child
-                background-color: #fff
-        &-content
-            td:first-child
+        text-align: center
+        width: 270px
+        caption
+            font-size: 12px
+            font-weight: 400
+            padding: 0.5rem
+            margin-bottom: 2px
+        tr
+            th
+                font-size: 11px
+                border: 1px solid #c1c1c1
                 background-color: $red
                 color: #fff
-        th:nth-child(2), th:nth-child(3)
-            background-color: #FFF700 
-            color: #000
-            font-weight: 400
-.tc11, .tc12, .tc13
-    .table-header
-        th:not(:first-child)
+                font-weight: 400
+                padding: 2px 2px
+                vertical-align: middle
+        tr
+            td
+                font-size: 10px
+                border: 1px solid #c1c1c1
+                color: #000
+                font-weight: 400
+                padding: 2px 2px
+                transition: all .3s ease
+                vertical-align: middle
+        tr:hover td, tr:active td, tr:focus td
+            cursor: pointer
+            background-color: rgb(237, 28, 36)
+        tr:nth-child(odd) td
             background-color: $yellow
-            color: #000
-    .table-content
-        td:first-child
-            background-color: $red
-            color: #fff
-.table_container
-    height: auto
-    .table2, .table3, .table4, .table5, .table6
-        width: 250px
-.tc11
-    margin-top: 3rem
-.table13
-    width: 320px
+        tr:nth-child(odd):hover td, tr:nth-child(odd):active td, tr:nth-child(odd):focus td
+            background-color: rgb(237, 28, 36)
+    .tc11
+        z-index: 400
+        background-color: #fff
+    .table2
+        width: 260px
+    .table3
+        width: 260px
+    .table4
+        width: 260px
+    .table5
+        width: 260px
+    .table6
+        width: 260px
+    .table7
+        width: 260px
+    .table4 
+        tr:first-child
+            td
+                background-color: $red
+                color: #fff
+.mb
+    margin-bottom: 10px
 // page price.html - End
+
+
+
+// section_map - Begin
+.container_products
+    margin-top: 19px
+    max-width: 1400px
+    .images
+        #carousel2
+            .owl-stage-outer
+                position: relative
+                .owl-stage
+                    .owl-item
+                        img
+                            margin: 0 auto
+                            height: 140px
+                            width: auto
+                            object-fit: cover
+            .owl-dots
+                content: ""
+                position: absolute
+                transform-origin: top
+                transform: rotate(-90deg) translateY(-50%)
+                right: 0
+                top: 50%
+    .text
+        padding: 10px 0.5rem
+        text-align: center
+        font-size: 14px
+        max-width: 700px
+        margin: 0 auto
+.section_map
+    margin: 0 auto
+    height: 300px
+    width: 100%
+    margin-bottom: 2rem
+    h4
+        margin: 0
+        text-align: center
+        padding: 0.5rem
+// section_map - End
+
+
+
+// tire_fitting - Begin
+.tire_fitting, .filling_conditioner
+    max-width: 1400px
+    margin: 10px auto 0 auto
+    padding: 0 6px
+    .top    
+        max-width: 1400px
+        margin: 0 4%
+        .imagewrap
+            display: inline-block
+            width: 40%
+            text-align: left
+            img
+                height: auto
+                width: 100%
+                object-fit: cover
+                display: inline-block
+        h1
+            width: 40%
+            display: inline-block
+            font-size: 11px
+            font-weight: 500
+            white-space: normal
+            text-align: center
+            float: right
+        .conditionertitle
+        .clearfix
+            clear: both
+        span
+            color: $red
+    p
+        margin: 0.5rem 0
+        font-size: 12px
+        color: #000
+        font-weight: 300
+        text-align: center
+        line-height: 1.2
+        a
+            color: $red
+            text-decoration: none
+            transition: all .3s ease
+            &:hover
+                color: $dred
+    .price
+        &-title        
+            font-size: 12px
+            font-weight: 600
+            color: $blue
+            text-align: center
+            line-height: 1.2
+        &-descr
+            font-size: 12px
+            font-weight: 400
+            line-height: 1.2
+            span
+                color: $blue
+        &-descr3
+            margin: 0
+            padding: 0
+            text-align: center
+            line-height: 1.2
+            li
+                list-style-type: none
+                font-size: 12px
+                margin: 0.5rem 0
+                background-color: #f1f1f1
+                text-align: center
+                padding: 0 2px
+                span
+                    color: $red
+                    font-weight: 400
+                .result
+                    color: $blue
+// tire_fitting - End
 
 
 

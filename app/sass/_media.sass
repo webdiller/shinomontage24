@@ -1,26 +1,95 @@
 @import "vars"
 
 
+    
 /*==========  Mobile First  ==========*/
-
-
+@media only screen and (min-width : 220px)
+    .tc7, .tc2, .tc3, .tc4, .tc13, .tc12
+        .table
+            .table-header
+                th:first-child
+                    width: 30px
+            .table-content
+                td:first-child
+                    width: 30px
+    .tc2, .tc3, .tc4, .tc5, .tc6
+        .table
+            .table-header
+                th:first-child
+                    width: 40%
+            .table-content
+                td:first-child
+                    width: 40%
+/*==========  Mobile First  ==========*/
 @media only screen and (min-width : 320px)
-	/**/
-
+    .table_container 
+        .table
+            width: 300px
+            tr
+                th
+                    padding: 2px
+                td
+                    padding: 2px
+    .tc7,.tc2, .tc4, .tc2
+        .table
+            .table-header
+                th:first-child, td:first-child
+                    width: 20px
+    .tc7, .tc2, .tc3, .tc4, .tc2, .tc13, .tc12
+        .table
+            .table-header
+                th:first-child
+                    min-width: 60px
+            .table-content
+                td:first-child
+                    min-width: 60px 
+/*==========  Mobile First  ==========*/
+@media only screen and (min-width : 320px)
+    .filling_conditioner .top .conditionertitle
+        padding-top: 10px
+@media only screen and (min-width : 320px)
+	.phones 
+        a
+            font-size: 15px
+        a:first-child
+            padding-right: 8px
+        a:last-child
+            padding-left: 8px
 @media only screen and (min-width : 375px)
     // index.html
-    .info2 li a
-        font-size: 0.8rem
+    header
+        height: 120px
+        max-height: 120px
+    header .logolink .logo
+        width: 110px
+    header .stickerlink .sticker
+        width: 70px
+    .phones
+        top: -25px
+    .phones a
+        font-size: 17px
     .descr
         text-align: center
         font-size: 0.9rem
+    // page price.html
+    .table_container
+        .table
+            width: 320px
+    // tire_fitting - Begin
+    .filling_conditioner .top h1, .tire_fitting .top h1
+        font-size: 13px
+    // tire_fitting - End
 
 @media only screen and (min-width : 425px)
     // index.html
-    header a .logo
+    header .logolink .logo
         width: 120px
+    header .stickerlink .sticker
+        width: 70px
+    .phones a
+        font-size: 18px
     .info2 li a
-        font-size: 0.8rem
+        font-size: 14px
     .descr
         text-align: center
         font-size: 0.9rem
@@ -31,23 +100,137 @@
             font-size: 1rem
     footer .social a .fa
         font-size: 1.4rem
-    .tc2, .tc3, .tc4, .tc5, .tc6
-        table
-            width: 300px
-
+    .table_container
+        .table
+            width: 410px
+            caption
+                font-size: 1rem
+                font-weight: 400
+                padding: 0.5rem 0
+                margin-bottom: 2px
+            tr
+                th
+                    font-size: 14px
+                    font-weight: 400
+            tr
+                td
+                    font-size: 12px
+                    border: 1px solid #c1c1c1
+    .tc7, .tc2, .tc3, .tc4, .tc2, .tc13, .tc12
+        .table
+            .table-header
+                th:first-child
+                    min-width: 80px
+            .table-content
+                td:first-child
+                    min-width: 80px 
+    // tire_fitting - Begin
+    .filling_conditioner .top h1, .tire_fitting .top h1
+        font-size: 15px
+    .container_products .text
+        margin-top: 20px
+        line-height: 1.2
+    // tire_fitting - End
+@media only screen and (min-width : 475px)
+    .filling_conditioner .price-descr3 li .result .transfer
+        display: none
+    .table_container 
+        .table
+            tr
+                th
+                    padding: 4px 6px
+                td
+                    padding: 4px 6px
+@media only screen and (min-width : 500px)
+    .filling_conditioner .top h1, .tire_fitting .top h1
+        font-size: 18px
+    .filling_conditioner .top .conditionertitle
+        padding-top: 20px
+    .filling_conditioner p
+        font-size: 15px
+    .filling_conditioner p, .tire_fitting p
+        font-size: 15px
+    .filling_conditioner .price-title, .tire_fitting .price-title
+        font-size: 16px
+    .filling_conditioner .price-descr, .tire_fitting .price-descr
+        font-size: 16px
+    .filling_conditioner .price-descr3 li, .tire_fitting .price-descr3 li
+        font-size: 15px
+    .table_container .table caption
+        margin: 20px 0
+    #carousel1
+        .owl-stage-outer
+            .owl-stage
+                .item
+                    height: 35vh
+                    min-height: 300px
+@media only screen and (min-width : 600px)
+    #carousel1
+    .owl-stage-outer
+        .owl-stage
+            .item
+                height: 60vh
+                min-height: 300px
+    .filling_conditioner .top h1, .tire_fitting .top h1
+        padding-top: 10px
+@media only screen and (min-width : 700px)
+    #carousel1
+        .owl-stage-outer
+            .owl-stage
+                .item
+                    height: 45vh
+                    min-height: 350px
+    .filling_conditioner .top .imagewrap, .tire_fitting .top .imagewrap
+        padding-left: 50px
+    .filling_conditioner .top .conditionertitle
+        padding-top: 30px
+    .filling_conditioner .top h1, .tire_fitting .top h1
+        padding-top: 20px
+        padding-right: 20px
 @media only screen and (min-width : 768px)
     // index.html
-    header a .logo
-        width: 150px
-    header .sticker
+    header
+        height: 200px
+        max-height: 200px
+    header .logolink .logo
+        width: 180px
+    header .stickerlink .sticker
         width: 120px
-    header .info-phone
-        top: -40px
+    .phones
+        top: -140px
+        margin-bottom: -140px
+        padding-left: 20px
         a
-            font-size: 1.4rem
+            margin: 0 12px
+            color: $yellow
+            font-size: 22px
     .info2
-    .info2 li a
-        font-size: 0.8rem
+        top: 45px
+        flex-direction: row
+        justify-content: center
+        width: 600px
+        max-width: 600px
+        flex-wrap: wrap
+        margin-bottom: 45px
+        li
+            height: 100%
+            margin: 2px 2px
+            a
+                font-size: 12px
+                padding: 8px 8px
+    #carousel1
+        max-width: 1400px
+        margin-left: auto
+        margin-right: auto
+        padding-top: 5px
+        .owl-stage-outer
+            .owl-stage
+                .owl-item
+                    width: 100%
+                    max-width: 100%
+                .item
+                    height: 45vh
+                    min-height: 400px
     .descr
         text-align: center
         margin: 1rem
@@ -67,71 +250,163 @@
         font-size: 1.4rem
     // index.html - End
     // price.html - Begin
-    .tc0
-        display: block
-    .tc11, .tc12
-        display: inline-block
-        width: 50%
-        margin-top: 0
-        margin-right: -4px
-        .title
-            font-size: 0.8rem
-        .table  
-            height: 200px
-    .tc13
-        margin-top: 1rem
-        margin-bottom: 1rem
-    .tc2, .tc3
-        display: inline-block
-        width: 50%
-        margin-right: -4px
-        height: 300px
+    .table_container
         .table
-            width: 300px
-            height: 250px
-    .tc4,.tc5
-        display: inline-block
-        width: 50%
-        margin-right: -4px
-        height: 400px
+            width: 500px
+            caption
+                font-size: 1.2rem
+                font-weight: 600
+                padding: 0.5rem 0
+                margin-bottom: 2px
+            tr
+                th
+                    font-size: 1.2rem
+            tr
+                td
+                    font-size: 1rem
+                    border: 1px solid #c1c1c1
+    .tc7, .tc2, .tc3, .tc4, .tc2, .tc13, .tc12
         .table
-            width: 300px
-            height: 300px
-    .tc6
-        position: relative
-        top: -3rem
-        height: 300px
-        .table
-            height: 250px
-            width: 400px
+            .table-header
+                th:first-child
+                    min-width: 100px
+            .table-content
+                td:first-child
+                    min-width: 100px 
+    .container
+        .article
+            padding: 2px
+            margin: 0.5rem 0.5rem
+            h2
+                font-size: 1.6rem
+                margin: 0.5rem 0
+            p
+                font-size: 15px
+                margin: 0 auto
+                padding: 0.5rem 0
+            img
     // price.html - End
+    .container_products
+        margin-top: 90px
+        background-color: #fff
+        padding: 0 20px
+        height: 250px
+        margin-left: auto
+        margin-right: auto
+        .images
+            width: 45%
+            display: inline-block
+            float: left
+        .section     
+            width: 45% 
+            float: right     
+            display: inline-block
+            text-align: justify
+            margin: 0
+            line-height: 1.3
+        .clearfix
+            clear: both
+    .container_products .images #carousel2 .owl-dots
+        display: none
+    .container_products .images #carousel2 .owl-stage-outer .owl-stage .owl-item img
+        height: 180px
+    .filling_conditioner .top h1, .tire_fitting .top h1
+        font-size: 13px
+    .container_products .text
+        font-size: 1rem
+        margin-bottom: 20px
+        line-height: 1.2
+    // tire_fitting - Begin
+    .tire_fitting, .filling_conditioner
+        margin-top: 80px
+        background-color: #fff
+        .top
+            img
+            h1
+                font-size: 22px
+                span
+                    color: $red
+            .conditionertitle
+                padding-top: 30px
+        p
+            margin: 0.5rem 0
+            font-size: 1rem
+        .price
+            &-title        
+                font-size: 1.2rem
+                font-weight: 600
+                color: $blue
+                text-align: center
+            &-descr
+                text-align: center
+                font-size: 1rem
+                font-weight: 400
+                span
+                    color: $blue
+            &-descr3
+                li
+                    padding: 0.5rem 0
+                    font-size: 1rem
+                    margin: 0.5rem 0
+                    background-color: #f1f1f1
+                    span
+                        font-weight: 400
+                        font-size: 16px
+                    .result
+    .filling_conditioner
+        margin-bottom: 20px
+    .tc7
+        margin-top: 10px
+    .tc11
+        margin-top: 20px
+        background-color: #fff
+    // tire_fitting - End
+
 
 @media only screen and (min-width : 1024px)
     // index.html - Begin
+    header
+        height: 250px
+        max-height: 250px
     header a .logo
-        width: 170px
-    header .sticker
-        width: 140px
-    header .info-phone
-        top: -35px
+        width: 220px
+    header a .sticker
+        width: 160px
+    header .logolink
+        top: 17px
+        left: 5rem
+    header .stickerlink
+        top: 17px
+        right: 6rem
+    .phones
+        top: -185px
+        margin-bottom: -185px
         a
-            font-size: 1.8rem
+            margin: 0 12px
+            color: $yellow
+            font-weight: 400
+            font-size: 28px
     .info2
-        flex-direction: row
+        top: 45px
+        margin-bottom: 45px
+        width: 900px
+        max-width: 900px
         li
-            margin: 0 0.5rem
-    .info2 li a
-        font-size: 0.8rem
+            a
+                padding: 10px
+                font-size: 18px
     #carousel1
-    .owl-stage-outer
-        .owl-stage
-            .item
-                height: 500px !important
+        padding-top: 26px
+        .owl-stage-outer
+            .owl-stage
+                .item
+                    height: 85vh
     .descr
         text-align: center
         margin: 1rem
         font-size: 1rem
     footer
+        margin-top: 20px
         padding: 1rem 2px
     footer p
         span
@@ -144,59 +419,24 @@
         font-size: 1.4rem
     // index.html - End
     // price.html - Begin
-    .table_container
-        overflow: hidden
+    .tc11, .tc12,.tc13
+        display: none
     .tc0
+        max-width: 1400px
+        margin: 0 auto
         display: block
-        margin-top: 3rem
-    .tc11, .tc12
-        display: inline-block
-        width: 50%
-        margin-top: 0
-        margin-right: -4px
-        .title
-            font-size: 0.8rem
-    .tc11
-        left: 2rem
-        position: relative
-    .tc12
-        right: 2rem
-        position: relative
-    .tc13
-        margin-top: 1rem
-        margin-bottom: 1rem
-    .tc2,.tc3
-        position: relative
-        display: inline-block
-        width: 50%
-        margin-right: -4px
-        height: 430px
+        margin-top: 19px
+        z-index: 200
+        background-color: #fff
+        padding-top: 30px
+        .table  
+            width: 900px
+            tr:first-child
+                th:nth-child(2)
+                    width: 80px
+    .tc2, .tc3, .tc4, .tc5, .tc6, .tc7
         .table
-            width: 250px
-    .tc2
-        left: 4rem
-    .tc3
-        right: 4rem
-    .tc4,.tc5
-        position: relative
-        display: inline-block
-        width: 50%
-        margin-right: -4px
-        height: 460px
-        .table
-            width: 370px
-    .tc4
-        left: 4rem
-    .tc5
-        right: 4rem
-    .table
-        th
-            font-size: 1.4rem
-        td
-            font-size: 1.2rem
-    .table_container
-        .title
-            font-size: 1rem
+            width: 900px
     .container
         .article
             padding: 2px
@@ -214,34 +454,124 @@
                 width: 100%
                 height: 100%
                 max-width: 400px
-    .tc2, .tc3, .tc4, .tc5, .tc6
-        table
-            width: 300px
     // price.html - End
+    .container_products
+        margin-top: 90px
+        background-color: #fff
+        padding: 0 20px
+        height: 250px
+        margin-left: auto
+        margin-right: auto
+        .images
+            width: 49%
+            display: inline-block
+            float: left
+        .section     
+            width: 49% 
+            float: right     
+            display: inline-block
+            text-align: justify
+            margin: 0
+            line-height: 1.6
+        .clearfix
+            clear: both
+    .container_products .images #carousel2 .owl-dots
+        display: none
+    .section_map
+        height: 400px
+        margin-bottom: 60px
+    .section_map h4
+        font-size: 26px
+        margin: 20px 0
+    .container_products .images #carousel2 .owl-stage-outer .owl-stage .owl-item img
+        height: 250px
+    .container_products .text
+        font-size: 1.2rem
+        margin-top: 20px
+    // tire_fitting - Begin
+    .filling_conditioner .top h1, .tire_fitting .top h1
+        font-size: 28px
+        padding-top: 40px
+    .filling_conditioner .top .conditionertitle
+        padding-top: 40px
+        text-align: center
+    .tire_fitting, .filling_conditioner
+        z-index: 200
+        background-color: #fff
+        padding: 40px 1.5rem 20px  1.5rem
+        span
+        p
+            margin: 2rem 0
+            font-size: 1.1rem
+        .price
+            &-title        
+                font-size: 1.2rem
+                font-weight: 600
+                color: $blue
+            &-descr
+                font-size: 1.1rem
+                font-weight: 400
+                margin: 4px 0
+                span
+                    color: $blue
+            &-descr3
+                li
+                    padding: 0.5rem 0
+                    font-size: 1.1rem
+                    margin: 0.5rem 0
+                    background-color: #f1f1f1
+                    span
+                        font-weight: 400
+                    .result
+    // tire_fitting - End
 @media only screen and (min-width : 1440px)
     // index.html - Begin
-    header a .logo
-        width: 190px
-    header .sticker
-        width: 160px
-    header .info-phone
-        top: -40px
+    header
+        height: 300px
+        max-height: 300px
+    .phones
+        top: -220px
+        margin-bottom: -220px
         a
-            margin: 0 1rem
-        a
-            font-size: 2.6rem
+            margin: 0 12px
+            color: $yellow
+            font-weight: 400
+            font-size: 32px
+    header .logolink .logo
+        width: 230px
+    header .stickerlink .sticker
+        width: 150px
+    header .logolink
+        left: 9rem
+    header .stickerlink
+        right: 10rem
     .info2
-        flex-direction: row
+        top: 50px
+        margin-bottom: -50px
         li
-            margin: 0 0.5rem
-    .info2 li a
-        font-size: 1.1rem
+            width: auto
+            a
+                padding: 16px
     #carousel1
-        margin-top: 2rem
-    .owl-stage-outer
-        .owl-stage
-            .item
-                height: 500px !important
+        margin-top: 102px
+        .owl-stage-outer
+            .owl-stage
+                .item
+                    height: 75vh
+                    min-height: 600px
+    .tc0
+        margin-top: 90px
+    .container_products .images #carousel2 .owl-stage-outer .owl-stage .owl-item img
+        height: 240px
+    .container_products .images #carousel2 .owl-dots button
+        margin: 0 10px
+    .container_products
+        height: 300px
+        margin-top: 150px
+        .images
+        .section     
+            margin: 0
+            padding-top: 40px
     .descr
         margin: 1rem auto
         text-align: center
@@ -275,6 +605,84 @@
                 width: 100%
                 height: 100%
                 max-width: 400px
+    .tire_fitting .price-descr3 li span, .filling_conditioner .price-descr3 li span
+        font-size: 20px
+    .filling_conditioner .top h1, .tire_fitting .top h1
+        font-size: 36px
+        padding-top: 50px
+    .filling_conditioner .top .conditionertitle
+        padding-top: 50px
+    .filling_conditioner .top .conditionertitle
+        text-align: center
+    .filling_conditioner, .tire_fitting
+        margin-top: 120px
 @media only screen and (min-width : 2560px)
-	/**/
-
+	header 
+        .logolink 
+            .logo
+                width: 220px
+        .stickerlink 
+            .sticker
+                width: 160px   
+@media only screen and (min-width : 2560px)
+    .info2 li a
+        font-size: 18px 
+    .descr
+        font-size: 26px
+    .container_products
+        height: 380px
+        padding-top: 60px
+    .container_products .section
+        padding-top: 0
+    .container_products .images #carousel2 .owl-stage-outer .owl-stage .owl-item img
+        height: 300px
+    .container_products .text
+        font-size: 26px
+    .filling_conditioner, .tire_fitting
+        margin-top: 140px
+    .section_map h4
+        font-size: 32px
+        margin: 20px 0 
+    .filling_conditioner .top h1, .tire_fitting .top h1
+        font-size: 32px
+    .filling_conditioner p, .tire_fitting p
+        font-size: 24px
+        line-height: 1.2
+    .tc0
+        .table
+            tr:nth-child(1)
+                th:nth-child(2)
+                    width: 100px
+    .table_container .table caption
+        font-size: 28px
+        padding: 20px 0
+    .table_container  
+        max-width: 1400px
+        .table
+            width: 100%
+            tr
+                th
+                    padding: 12px 4px
+                    font-size: 32px
+                    vertical-align: middle
+                td
+                    vertical-align: middle
+                    padding: 12px 4px
+                    font-size: 26px
+    .container .article h2
+        font-size: 32px
+        font-weight: 600
+    .container .article p
+        font-size: 26px
+        margin: 20px auto 0 auto
+        &:first-letter
+            font-size: 38px
+    .filling_conditioner .price-title, .tire_fitting .price-title
+        font-size: 32px
+    .filling_conditioner .price-descr, .tire_fitting .price-descr
+        font-size: 26px
+        line-height: 1.4
+    .filling_conditioner .price-descr3 li
+        font-size: 32px
+        span
+            font-size: 32px
